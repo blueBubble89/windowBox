@@ -1,0 +1,33 @@
+{
+  "name": "polarlink-map-viewer",
+  "version": "1.0.0",
+  "description": "全屏 Webview 应用访问 Polarlink 地图",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win"
+  },
+  "keywords": ["electron", "webview", "fullscreen"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.polarlink.mapviewer",
+    "productName": "Polarlink Map Viewer",
+    "win": {
+      "target": ["nsis"],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Polarlink Map Viewer"
+    }
+  }
+}
